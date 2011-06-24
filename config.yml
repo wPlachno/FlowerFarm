@@ -1,0 +1,173 @@
+#FLOWERFARM Config File: TARGET, NOT IN USE, SIMPLY THE DREAM CONFIG FILE
+
+#TERMINOLOGY:
+#FATHER BLOCK: Think of this as the flowers spreading seeds in the wind. The block that starts the process.
+#DESCENDENT BLOCK: The block where the flower will grow, and, eventually, the flower itself. 
+#SOIL BLOCK: This is where the roots would locate. The block immediately below the descendent block.
+#NUTRIENT BLOCK: This is any other block required to be in the vicinity for the descendent to grow healthy.
+
+#Must use BlockIDs!
+#Also, any number must be a full integer, no decimals.
+
+#If you need to brush up on your blockIDs,
+#Go to: www.minecraftwiki.net/wiki/Block_ids
+
+father:
+
+    #How many father blocks do we have?
+    amtFathers: 3      
+
+    #Each case must be simply the # starting with 0            
+    0:
+        #Sets the first father to the Dandelion block. Must use blockID
+        fatherID: 37
+        #Set the seconds before the father seeds. Recommended to be 5 minutes. 
+        secondsToSeed: 300
+        #Use simple adjacent block seeding or complex badass formula created by me. :)
+        simpleAlgorithm: false
+        #Set the radius of seeding. Recommended 2 blocks, can be memory sensitive
+        seedRadius: 2
+        #Sets the luminosity required for the father to
+        #spread his seed. Leave at 0 for any luminosity
+        fatherReqLum: 9
+        
+        #Organizer for descendent blocks
+        desc:
+            #How many possible descendents are there?
+            amtDescBlocks: 1
+            #First descendent
+            0:
+                #Base descendent may be the parents ID
+                descID: 37
+                #Set the descendents luminosity requirement
+                descReqLum: 7
+                #Set the probability, out of 100, that, if theres a germination, the desc will be this block
+                descProb: 100
+        
+        #Organizer for soil blocks
+        soil:
+            #Set the amount of possible soil blocks. If 0, will grow on anything with mult of 3
+            amtSoilBlocks: 2
+            #Each case must be #, starting with 0
+            0:
+                #Set to Grass. Must use blockID
+                soilID: 2
+                #Set this germinatees fertilization multiplier. Do not exceed 5
+                soilFertMult: 3
+            #When using grass as a germinatee, consider dirt as well.
+            1:
+                #Set to dirt
+                soilID: 3
+                #Contact me if you have questions about why the default fertmult is higher for dirt than grass
+                soilFertMult: 4
+        
+        #Organizer for nutrient blocks
+        nutrient:
+            requireWater: true
+            amtNutrientBlocks: 0 
+            
+    #Second father. Each case must be simply the # starting with 0            
+    1:
+        #Sets the second father to the rose block. Must use blockID
+        fatherID: 38
+        #Set the seconds before the father seeds. Recommended to be 5 minutes. 
+        secondsToSeed: 300
+        #Use simple adjacent block seeding or complex badass formula created by me. :)
+        simpleAlgorithm: false
+        #Set the radius of seeding. Recommended 2 blocks, can be memory sensitive
+        seedRadius: 2
+        #Sets the luminosity required for the father to
+        #spread his seed. Leave at 0 for any luminosity
+        fatherReqLum: 9
+        
+        #Organizer for descendent blocks
+        desc:
+            #How many possible descendents are there?
+            amtDescBlocks: 1
+            #First descendent
+            0:
+                #Base descendent may be the parents ID
+                descID: 38
+                #Set the descendents luminosity requirement
+                descReqLum: 7
+                #Set the probability, out of 100, that, if theres a germination, the desc will be this block
+                descProb: 100
+        
+        #Organizer for soil blocks
+        soil:
+            #Set the amount of possible soil blocks. If 0, will grow on anything with 3 mult
+            amtSoilBlocks: 2
+            #Each case must be #, starting with 0
+            0:
+                #Set to Grass. Must use blockID
+                soilID: 2
+                #Set this germinatees fertilization multiplier. Do not exceed 5
+                soilFertMult: 3
+            #When using grass as a germinatee, consider dirt as well.
+            1:
+                #Set to dirt
+                soilID: 3
+                #Contact me if you have questions about why the default fertmult is higher for dirt than grass
+                soilFertMult: 4
+        
+        #Organizer for nutrient blocks
+        nutrient:
+            requireWater: true
+            amtNutrientBlocks: 0 
+
+    #Each case must be simply the # starting with 0            
+    2:
+        #Sets the last father to the pumpkin block. Must use blockID
+        fatherID: 86
+        #Set the seconds before the father seeds. Recommended to be 5 minutes. 
+        secondsToSeed: 300
+        #Use simple adjacent block seeding or complex badass formula created by me. :)
+        simpleAlgorithm: false
+        #Set the radius of seeding. Recommended 2 blocks, can be memory sensitive
+        seedRadius: 2
+        #Sets the luminosity required for the father to
+        #spread his seed. Leave at 0 for any luminosity
+        fatherReqLum: 0
+        
+        #Organizer for descendent blocks
+        desc:
+            #How many possible descendents are there?
+            amtDescBlocks: 2
+            #First descendent
+            0:
+                #Base descendent may be the parents ID
+                descID: 86
+                #Set the descendents luminosity requirement
+                descReqLum: 0
+                #Set the probability, out of 100, that, if theres a germination, the desc will be this block
+                descProb: 90
+            #Second descendent
+            1:
+                #Pumpkins may seed Jack-O-Lanterns
+                descID: 91
+                #Only in high light
+                descReqLum: 12
+                #Set prob
+                descProb: 10
+        
+        #Organizer for soil blocks
+        soil:
+            #Set the amount of possible soil blocks
+            amtSoilBlocks: 2
+            #Each case must be #, starting with 0
+            0:
+                #Set to Grass. Must use blockID
+                soilID: 2
+                #Set this germinatees fertilization multiplier. Do not exceed 5
+                soilFertMult: 3
+            #When using grass as a germinatee, consider dirt as well.
+            1:
+                #Set to dirt
+                soilID: 3
+                #Contact me if you have questions about why the default fertmult is higher for dirt than grass
+                soilFertMult: 4
+        
+        #Organizer for nutrient blocks
+        nutrient:
+            requireWater: true
+            amtNutrientBlocks: 0 

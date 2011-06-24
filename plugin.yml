@@ -1,0 +1,10 @@
+name: FlowerFarm
+main: me.wPlachno.FlowerFarm.FlowerFarm
+version: 0.0.1
+description:
+    A plugin for block generation at a small scale.
+commands:
+    FlowerFarm:
+        description: This is a FlowerFarm help command.
+        usage: |
+            /<command>
